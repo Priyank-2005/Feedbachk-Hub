@@ -43,7 +43,6 @@
   }
 }
 
-
 .title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -63,6 +62,8 @@
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   transition: box-shadow 0.3s;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .input:focus {
@@ -79,14 +80,13 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
 }
 
 .button:hover {
   background: linear-gradient(to right, #0072ff, #00c6ff);
   transform: scale(1.03);
 }
-
-/* Admin dashboard specific table styling */
 
 .dashboardBox {
   width: 100%;
@@ -122,6 +122,7 @@
   padding: 1rem;
   border-radius: 10px;
   max-height: 80vh;
+  overflow-x: auto;
   overflow-y: auto;
   width: 100%;
 }
@@ -130,6 +131,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
+  min-width: 700px; /* prevents overflow from squeezing columns too tight */
 }
 
 .table th,
@@ -187,4 +189,59 @@
 
 .pagination span {
   font-weight: bold;
+}
+
+/* ─────────────── 📱 Responsive Styles ─────────────── */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .loginBox {
+    padding: 2rem;
+  }
+
+  .input {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .loginBox {
+    padding: 1.5rem;
+  }
+
+  .input {
+    font-size: 0.85rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+
+  .tableWrapper {
+    padding: 0.5rem;
+  }
+
+  .table {
+    min-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .deleteButton {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
 }

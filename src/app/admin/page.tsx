@@ -74,7 +74,7 @@ export default function AdminDashboard() {
     <main className={styles.main}>
       <Toaster position="top-center" />
       <div className={styles.dashboardBox}>
-        <h2 className={styles.title}>📋 Feedback Dashboard</h2>
+        <h2 className={styles.title}>Feedback Dashboard</h2>
         <div className={styles.tableWrapper}>
           <table className={styles.table}>
             <thead>

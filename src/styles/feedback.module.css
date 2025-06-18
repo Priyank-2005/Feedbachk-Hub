@@ -1,4 +1,3 @@
-/* File: src/styles/submit.module.css */
 .main {
   min-height: 100vh;
   display: flex;
@@ -14,6 +13,7 @@
   color: #fff;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   animation: slideInDown 0.7s ease-out;
 }
@@ -105,5 +105,49 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/* ─────────────── 📱 Responsive Styles ─────────────── */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .form {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .input,
+  .textarea {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
   }
 }
